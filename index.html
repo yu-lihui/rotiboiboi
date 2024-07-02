@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roti boiboi</title>
+    <link rel="stylesheet" type="text/css" href="./resources/index.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-popup">upcoming pop up: xx</div>
+        <div class="header-socialmedia"><a href="mailto:rotiboiboi@gmail.com" target="_blank"><img id="email"
+                    src="./resources/images/mail.png" alt="email"></a></div>
+        <div class="header-insta"><a href="https://www.instagram.com/rotiboiboi/" target="_blank"><img id="instagram"
+                    src="./resources/images/instagram icon.png" alt="instagram"></a></div>
+
+    </div>
+
+
+    <!-- navigation bar with logo at left side-->
+    <div class="navigation">
+        <div class="nav-logo">
+            <a href="index.html"><img id="logo" src="./resources/images/rotiboiboi-logo.png" alt="rotiboiboi logo"></a>
+        </div>
+        <div class="nav-links-container">
+            <div class="nav-links"><a href="index.html">home</a></div>
+            <div class="nav-links"><a href="index.html">products</a></div>
+            <div class="nav-links"><a href="index.html">about</a></div>
+        </div>
+    </div>
+
+    <!--slideshow container element for slider to go in-->
+    <div class="slider-container">
+        <!--the 'screen' that displays all the slides-->
+        <div class="slider">
+            <!--element that holds the slides and scrolls to give slider effect-->
+            <div class="slider_slides">
+                <!--individual slides with unique id each-->
+                <div id="slides_1" class="slider_slide active">
+                    <img src="./resources/images/sticker - rotiboiboi 4.png" alt="1">
+                    <div class="slide_content">
+                        <a href="./index.html" class="slide_button">shop now</a>
+                    </div>
+                </div>
+                <a class="slide_prev" href="#slides_4" title="Next"></a>
+                <a class="slide_next" href="#slides_2" title="Next"></a>
+            </div>
+            <div id="slides_2" class="slider_slide">
+                <img src="./resources/images/washi tape 3.png" alt="washi tape">
+                <a class="slide_prev" href="#slides_1" title="Prev"></a>
+                <a class="slide_next" href="#slides_3" title="Next"></a>
+            </div>
+            <div id="slides_3" class="slider_slide">
+                <span class="slide_text">3</span>
+                <a class="slide_prev" href="#slides_2" title="Prev"></a>
+                <a class="slide_next" href="#slides_4" title="Next"></a>
+            </div>
+            <div id="slides_4" class="slider_slide">
+                <span class="slide_text">4</span>
+                <a class="slide_prev" href="#slides_3" title="Prev"></a>
+                <a class="slide_next" href="#slides_1" title="Prev"></a>
+            </div>
+            <div id="nav-button-prev" class="slider_nav-button">&#10094;</div>
+            <div id="nav-button-next" class="slider_nav-button">&#10095;</div>
+            <!--breadcrumbs button to navigate across images-->
+            <div class="slider_nav">
+                <div class="slider_navlink active"></div>
+                <div class="slider_navlink"></div>
+                <div class="slider_navlink"></div>
+                <div class="slider_navlink"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-collection-container">
+        <h1>featured collection</h1>
+        <div class="product-grid">
+            <div class="product-item">
+                <div class="image-container">
+                    <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washi tape">
+                    <div class="overlay">
+                        <a href="./product_washitape.html" class="overlay_button">buy me</a>
+                    </div>
+                </div>
+                <h3>washi tape</h3>
+                <p>$5.00</p>
+            </div>
+            <div class="product-item">
+                <div class="image-container">
+                    <img src="./resources/images/keychain-roti-2.jpg" alt="keychain">
+                    <div class="overlay">
+                        <a href="./index.html" class="overlay_button">buy me</a>
+                    </div>
+                </div>
+                <h3>keychain</h3>
+                <p>$5.00</p>
+            </div>
+            <div class="product-item">
+                <div class="image-container">
+                    <img src="./resources/images/sticker - rotiboiboi 3.png" alt="sticker">
+                    <div class="overlay">
+                        <a href="./index.html" class="overlay_button">buy me</a>
+                    </div>
+                </div>
+                <h3>stickers</h3>
+                <p>$5.00</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-name">
+            <p>roti boiboi</p>
+        </div>
+        <div class="footer-payment">
+            <p>we accept paynow/paylah/cash!</p>
+        </div>
+    </div>
+
+
+    <a href="https://wa.me/+6591195145" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <img src="./resources/images/whatsapp icon.png" alt="Whatsapp">
+    </a>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
