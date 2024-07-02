@@ -1,0 +1,467 @@
+body {
+    background-color: linen;
+    padding-top: 30px;
+}
+
+/* header*/
+.header {
+    background-color: rgb(129, 97, 87);
+    width: 100%;
+    height: 40px;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+    position: fixed;
+    z-index: 11;
+
+}
+
+.header-popup {
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+.header-socialmedia {
+    margin-left: auto;
+}
+
+.header-insta {
+    margin-right: 20px;
+}
+
+#email {
+    width: 50px;
+    height: 50px;
+}
+
+#instagram {
+    width: 30px;
+    height: 30px;
+}
+
+.header img:hover {
+    filter: opacity(0.2);
+}
+
+
+/* navigation bar */
+.navigation {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    background-color: ivory;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* optional: adds a subtle shadow */
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 30px;
+    color: dimgray;
+    /*text colour for navbar */
+}
+
+.nav-links-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    margin: 0 50px;
+}
+
+.nav-logo {
+    flex: 0 0 auto;
+}
+
+#logo {
+    width: 130px;
+    height: 130px;
+    /* adds margin space to left of logo to push it closer to middle and the other nav bar links */
+}
+
+.navigation a:hover {
+    color: darksalmon;
+    /* link color when hovered */
+}
+
+.navigation img:hover {
+    filter: opacity(0.5);
+}
+
+/* slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 150px;
+}
+
+.slider {
+    width: 100%;
+    height: 0;
+    padding-top: 40%;
+    text-align: center;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.slider_slides {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slider_slide {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    background-color: lemonchiffon;
+    transition: 1s;
+    opacity: 0;
+}
+
+.slide_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.slide_button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: thistle;
+    color: #fff;
+    font-family: monospace;
+}
+
+.slide_button:hover {
+    background-color: palegoldenrod;
+}
+
+
+.slider_slide.active {
+    opacity: 1;
+}
+
+.slider_slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider_nav-button {
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: .8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+#nav-button-next {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#nav-button-prev {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.slider_nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.slider_navlink {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 10px 0 10px;
+    opacity: .8;
+}
+
+.slider_navlink.active {
+    background-color: #fff;
+}
+
+/* featured collection */
+
+.featured-collection-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.featured-collection-container h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: dimgray;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item {
+    flex-basis: calc(33.333% - 20px);
+    /* Subtracting margin */
+    margin-bottom: 30px;
+    color: dimgray;
+    text-align: center;
+    overflow: hidden;
+    /* This will contain the zoomed image */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* This will contain the zoomed image */
+    margin-bottom: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.overlay_button {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: thistle;
+    color: #fff;
+    font-family: monospace;
+}
+
+/*This selector targets the button itself when it's being hovered over.*/
+.overlay_button:hover {
+    background-color: rgb(129, 97, 87);
+}
+
+/* This selector targets the .overlay element when its parent .product-item is being hovered over.*/
+.product-item:hover .overlay {
+    opacity: 1;
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+/* footer bar */
+.footer {
+    background-color: rgb(129, 97, 87);
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 11;
+    position: relative;
+}
+
+.footer-name {
+    color: white;
+    margin-left: 20px;
+}
+
+.footer-payment {
+    color: white;
+}
+
+.whatsapp-button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    transition: opacity 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    opacity: 0.5;
+}
+
+.whatsapp-button img {
+    width: 90px;
+    height: 90px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/*product page css*/
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 170px;
+
+}
+
+.product-images {
+    flex: 1;
+    margin-right: 40px;
+    /*image will grow to fill available space in container and shrink if necessary*/
+    padding-top: 50px;
+}
+
+.main-image img {
+    width: 800px;
+    height: auto;
+}
+
+.thumbnail-images {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnail-images img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.product-details {
+    padding-top: 120px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: thistle;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+}
+
+#quantity {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+
+/* Remove arrow buttons from number input */
+#quantity::-webkit-inner-spin-button,
+#quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spinner buttons for Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.add-to-cart {
+    background-color: thistle;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
