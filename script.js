@@ -46,13 +46,19 @@ document.querySelectorAll('.slider_navlink').forEach((bullet, bulletIndex) => {
 //product page: quantity input selector buttons//
 
 function setupQuantitySelector() {
-    const minusBtn = document.querySelector('.minus');
-    const plusBtn = document.querySelector('.plus');
-    const quantityInput = document.getElementById('quantity');
+    const minusBtn = document.querySelector('.quantity-btn.minus');
+    const plusBtn = document.querySelector('.quantity-btn.plus');
+    const quantityInput = document.querySelector('.quantity-input');
 
-    console.log('Minus button:', minusBtn);
-    console.log('Plus button:', plusBtn);
-    console.log('Quantity input:', quantityInput);
+
+    if (!minusBtn || !plusBtn || !quantityInput) {
+        console.error('Quantity selector elements not found');
+        return;
+    }
+
+    console.log('Quantity selector elements found, setting up listeners');
+
+
 
     minusBtn.addEventListener('click', function () {
         let value = parseInt(quantityInput.value);
@@ -63,17 +69,29 @@ function setupQuantitySelector() {
             quantityInput.value = value;
             //update input field's value with new decreased value.
         }
-        console.log('Minus button clicked');
     });
 
+    //Add upper limit
     plusBtn.addEventListener('click', function () {
         let value = parseInt(quantityInput.value);
-        value++;
-        quantityInput.value = value;
+        if (value < 99) {
+            value++;
+            quantityInput.value = value;
+        }
     });
+
+    // Handling direct input
+    quantityInput.addEventListener('change', () => {
+        let value = parseInt(quantityInput.value);
+        if (isNaN(value) || value < 1) {
+            quantityInput.value = 1;
+        } else if (value > 99) {
+            quantityInput.value = 99;
+        }
+    })
 }
 
-setupQuantitySelector();
-
-document.addEventListener('DOMContentLoaded', setupQuantitySelector);
-
+// To ensure DOM fully loads before running script
+document.addEventListener('DOMContentLoaded', function () {
+    setupQuantitySelector();
+});

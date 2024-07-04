@@ -1,11 +1,12 @@
 body {
     background-color: linen;
     padding-top: 30px;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 /* header*/
 .header {
-    background-color: rgb(129, 97, 87);
+    background-color: #D19900;
     width: 100%;
     height: 40px;
     color: white;
@@ -21,7 +22,7 @@ body {
 }
 
 .header-popup {
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 20px;
 
 }
@@ -35,13 +36,13 @@ body {
 }
 
 #email {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 #instagram {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .header img:hover {
@@ -66,7 +67,7 @@ body {
 
 .navigation a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     color: dimgray;
     /*text colour for navbar */
 }
@@ -93,7 +94,7 @@ body {
 }
 
 .navigation a:hover {
-    color: darksalmon;
+    color: #D19900;
     /* link color when hovered */
 }
 
@@ -158,14 +159,14 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
-    font-size: 20px;
-    background-color: thistle;
+    font-size: 30px;
+    background-color: #D19900;
     color: #fff;
-    font-family: monospace;
 }
 
 .slide_button:hover {
-    background-color: palegoldenrod;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -271,6 +272,7 @@ body {
     overflow: hidden;
     /* This will contain the zoomed image */
     margin-bottom: 10px;
+
 }
 
 .overlay {
@@ -285,6 +287,7 @@ body {
     align-items: flex-end;
     justify-content: center;
     transition: opacity 0.3s ease;
+
 }
 
 .overlay_button {
@@ -294,14 +297,14 @@ body {
     border-radius: 20px;
     text-decoration: none;
     font-size: 20px;
-    background-color: thistle;
+    background-color: #D19900;
     color: #fff;
-    font-family: monospace;
 }
 
 /*This selector targets the button itself when it's being hovered over.*/
 .overlay_button:hover {
-    background-color: rgb(129, 97, 87);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* This selector targets the .overlay element when its parent .product-item is being hovered over.*/
@@ -320,9 +323,21 @@ body {
     transform: scale(1.1);
 }
 
+.productpage-title:hover {
+    color: #D19900;
+}
+
+.productpage-title {
+    color: dimgray;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* footer bar */
 .footer {
-    background-color: rgb(129, 97, 87);
+    background-color: #D19900;
     width: 100%;
     height: 40px;
     top: 0;
@@ -410,12 +425,12 @@ body {
 }
 
 .product-title {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
 .product-price {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -435,18 +450,19 @@ body {
     border-radius: 50%;
 }
 
-#quantity {
+.quantity-input {
     width: 50px;
     height: 30px;
     text-align: center;
     font-size: 18px;
     border: 1px solid #ddd;
-    margin: 0 5px;
+    margin: 10px 5px;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 /* Remove arrow buttons from number input */
-#quantity::-webkit-inner-spin-button,
-#quantity::-webkit-outer-spin-button {
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -464,4 +480,5 @@ input[type="number"] {
     cursor: pointer;
     font-size: 18px;
     margin-top: 20px;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }

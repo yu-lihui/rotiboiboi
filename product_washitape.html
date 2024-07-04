@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>roti boiboi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
 
@@ -46,14 +49,17 @@
             <p class="product-price">$5</p>
 
             <div class="product-description">
-                <p>product info: i am washi tape</p>
+                <p>I am a sticky decorative tape. Use me in scrapbooks, cards or anywhere else.
+                    <br><br>Size: xx
+                    <br><br>Material: xx
+                </p>
             </div>
             <div class="product-options">
-                <label for="quantity">Quantity:</label>
+                <label for="quantity"><strong>Quantity</strong></label>
                 <div class="quantity-selector">
                     <button class="quantity-btn minus">-</button>
                     <!--html element 'input' to create an input field in a form. ensure label for equals to id input-->
-                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    <input type="number" class="quantity-input" name="quantity" min="1" max="99" value="1">
                     <button class="quantity-btn plus">+</button>
                 </div>
             </div>
@@ -77,7 +83,7 @@
     <a href="https://wa.me/+6591195145" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
         <img src="./resources/images/whatsapp icon.png" alt="Whatsapp">
     </a>
-    <script src="./script.js"></script>
+    <script src="./script_product.js"></script>
 </body>
 
 
