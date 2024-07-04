@@ -36,8 +36,11 @@ body {
 }
 
 #email {
-    width: 30px;
+    <<<<<<< HEAD width: 30px;
     height: 30px;
+    =======width: 35px;
+    height: 35px;
+    >>>>>>>1f42b560a960821e0c4b4db4e88c5e2a94fea977
 }
 
 #instagram {
@@ -480,5 +483,10 @@ input[type="number"] {
     cursor: pointer;
     font-size: 18px;
     margin-top: 20px;
-    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    <<<<<<< HEAD font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
+
+=======
+}
+
+>>>>>>>1f42b560a960821e0c4b4db4e88c5e2a94fea977
