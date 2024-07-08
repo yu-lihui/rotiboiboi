@@ -18,7 +18,6 @@
                     src="./resources/images/white mail icon.png" alt="email"></a></div>
         <div class="header-insta"><a href="https://www.instagram.com/rotiboiboi/" target="_blank"><img id="instagram"
                     src="./resources/images/white instagram icon.png" alt="instagram"></a></div>
-
     </div>
 
     <!-- navigation bar with logo at left side-->
@@ -31,23 +30,35 @@
             <div class="nav-links"><a href="index.html">products</a></div>
             <div class="nav-links"><a href="index.html">about</a></div>
         </div>
+        <div class="nav-others-container">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search">
+                <button class="search-button">
+                    <img src="./resources/images/search tool icon.png" alt="search">
+                </button>
+            </div>
+            <div class="cart-container">
+                <a href="index.html"><img id="cart" img src="./resources/images/shopping cart icon.png"
+                        alt="my cart"></a>
+            </div>
+        </div>
     </div>
 
+    <!-- product page container -->
     <div class="product-container">
-        <div class="product-images">
+        <div class="product-gallery">
             <div class="main-image">
-                <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washitape">
+                <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washitape" id="main-product-image">
             </div>
-            <div class="thumbnail-images">
-                <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washitape">
-                <img src="./resources/images/washi tape 3.png" alt="washitape">
+            <div class="thumbnails">
+                <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washitape 1" class="thumbnail">
+                <img src="./resources/images/washi tape 3.png" alt="washitape" class="thumbnail">
             </div>
         </div>
 
         <div class="product-details">
             <h1 class="product-title">Washi Tape</h1>
             <p class="product-price">$5</p>
-
             <div class="product-description">
                 <p>I am a sticky decorative tape. Use me in scrapbooks, cards or anywhere else.
                     <br><br>Size: xx
@@ -63,13 +74,13 @@
                     <button class="quantity-btn plus">+</button>
                 </div>
             </div>
-
-            <button class="add-to-cart">Add to cart</button>
-
+            <div class="button-container">
+                <button class="add-to-cart">Add to cart</button>
+            </div>
         </div>
     </div>
-    </div>
 
+    <!--footer bar-->
     <div class="footer">
         <div class="footer-name">
             <p>roti boiboi</p>

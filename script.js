@@ -43,6 +43,17 @@ document.querySelectorAll('.slider_navlink').forEach((bullet, bulletIndex) => {
     })
 })
 
+
+// Search function
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.querySelector('.search-input');
+    const searchButton = document.querySelector('.search-button');
+
+    function performSearch() {
+        const searchTerm
+    }
+})
+
 //product page: quantity input selector buttons//
 
 function setupQuantitySelector() {
@@ -95,3 +106,4 @@ function setupQuantitySelector() {
 document.addEventListener('DOMContentLoaded', function () {
     setupQuantitySelector();
 });
+

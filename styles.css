@@ -1,7 +1,18 @@
+/* 'reset' technique: targets every single element on the page*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: linen;
     padding-top: 30px;
     font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*body is at least as tall as viewport*/
 }
 
 /* header*/
@@ -36,11 +47,9 @@ body {
 }
 
 #email {
-    <<<<<<< HEAD width: 30px;
+    width: 30px;
     height: 30px;
-    =======width: 35px;
-    height: 35px;
-    >>>>>>>1f42b560a960821e0c4b4db4e88c5e2a94fea977
+
 }
 
 #instagram {
@@ -61,6 +70,8 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 150px;
     background-color: ivory;
@@ -93,7 +104,22 @@ body {
 #logo {
     width: 130px;
     height: 130px;
-    /* adds margin space to left of logo to push it closer to middle and the other nav bar links */
+}
+
+.nav-others-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart {
+    width: 30px;
+    height: 30px;
+}
+
+#cart:hover {
+    transform: scale(1.1);
 }
 
 .navigation a:hover {
@@ -104,6 +130,43 @@ body {
 .navigation img:hover {
     filter: opacity(0.5);
 }
+
+/* search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.search-button img:hover {
+    filter: opacity(0.5);
+}
+
+.search-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    flex-grow: 1;
+    background: none;
+    outline: none;
+    /*removes input highlight*/
+}
+
 
 /* slider */
 .slider-container {
@@ -332,6 +395,7 @@ body {
 
 .productpage-title {
     color: dimgray;
+    margin-bottom: 10px;
 }
 
 a {
@@ -341,21 +405,22 @@ a {
 /* footer bar */
 .footer {
     background-color: #D19900;
-    width: 100%;
+    width: 100vw;
     height: 40px;
     top: 0;
     left: 0;
     right: 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     z-index: 11;
     position: relative;
+    margin-top: auto;
 }
 
 .footer-name {
     color: white;
-    margin-left: 20px;
 }
 
 .footer-payment {
@@ -387,44 +452,52 @@ a {
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
-/*product page css*/
+/*viewport gallery product page*/
 .product-container {
     display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
     max-width: 1200px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 170px;
-
+    padding-top: 200px;
 }
 
-.product-images {
-    flex: 1;
+.product-gallery {
+    display: flex;
+    flex-direction: column;
     margin-right: 40px;
-    /*image will grow to fill available space in container and shrink if necessary*/
-    padding-top: 50px;
+}
+
+.main-image {
+    width: 800px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .main-image img {
-    width: 800px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.thumbnail-images {
+.thumbnails {
     display: flex;
-    margin-top: 10px;
+    justify-content: start;
+    gap: 10px;
 }
 
-.thumbnail-images img {
+.thumbnail {
     width: 60px;
     height: 60px;
-    margin-right: 20px;
+    object-fit: cover;
     cursor: pointer;
 }
 
 .product-details {
-    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
 }
 
 .product-title {
@@ -437,6 +510,9 @@ a {
     margin-bottom: 20px;
 }
 
+.product-description {
+    margin-bottom: 20px;
+}
 
 .quantity-selector {
     display: flex;
@@ -451,6 +527,11 @@ a {
     font-size: 18px;
     border: none;
     border-radius: 50%;
+}
+
+.quantity-btn:hover {
+    background-color: #b197b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .quantity-input {
@@ -475,18 +556,27 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 .add-to-cart {
     background-color: thistle;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 100px;
     border: none;
     cursor: pointer;
     font-size: 18px;
+    font-weight: bold;
     margin-top: 20px;
-    <<<<<<< HEAD font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-=======
+.add-to-cart:hover {
+    background-color: #b197b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
->>>>>>>1f42b560a960821e0c4b4db4e88c5e2a94fea977

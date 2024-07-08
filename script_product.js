@@ -1,3 +1,4 @@
+
 //product page: quantity input selector buttons//
 function setupQuantitySelector() {
     const minusBtn = document.querySelector('.quantity-btn.minus');
@@ -40,3 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
     setupQuantitySelector();
 });
 
+//product gallery image switch//
+document.addEventListener('DOMContentLoaded', function () {
+    const mainImage = document.getElementById('main-product-image');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function () {
+            mainImage.src = this.src;
+            //this.src refers to URL of clicked thumbnail image//
+        })
+    })
+})
