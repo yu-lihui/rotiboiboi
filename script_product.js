@@ -48,8 +48,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     thumbnails.forEach(thumb => {
         thumb.addEventListener('click', function () {
+            //this.src refers to URL of clicked thumbnail image. changes main image source to clicked thumbnail source//
             mainImage.src = this.src;
-            //this.src refers to URL of clicked thumbnail image//
+
+            //for each thumbnail element, remove 'selected' class if it has one//
+            //t=> is an arrow function, t is a parameter representing current thumbnail element in each iteration//
+            thumbnails.forEach(t => t.classList.remove('selected'));
+
+            //adds 'selected' class to clicked thumbnail so it has a border//
+            this.classList.add('selected');
         })
     })
 })

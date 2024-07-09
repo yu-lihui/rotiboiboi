@@ -493,6 +493,11 @@ a {
     cursor: pointer;
 }
 
+.thumbnail.selected {
+    border: 2px solid black;
+    padding: 2px;
+}
+
 .product-details {
     display: flex;
     flex-direction: column;
