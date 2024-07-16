@@ -44,39 +44,28 @@
         </div>
     </div>
 
-    <!-- product page container -->
-    <div class="product-container">
-        <div class="product-gallery">
-            <div class="main-image">
-                <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washitape" id="main-product-image">
-            </div>
-            <div class="thumbnails">
-                <img src="./resources/images/washi tape - rotiboiboi 2.png" alt="washitape 1" class="thumbnail">
-                <img src="./resources/images/washi tape 3.png" alt="washitape" class="thumbnail">
-            </div>
-        </div>
+    <!--my cart container-->
+    <div class="cart-container">
+        <h1>my cart</h1>
+        <table class="cart-table">
+            <tr>
+                <th>item</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>total</th>
+            </tr>
 
-        <div class="product-details">
-            <h1 class="product-title">Washi Tape</h1>
-            <p class="product-price">$5</p>
-            <div class="product-description">
-                <p>I am a sticky decorative tape. Use me in scrapbooks, cards or anywhere else.
-                    <br><br>Size: xx
-                    <br><br>Material: xx
-                </p>
-            </div>
-            <div class="product-options">
-                <label for="quantity"><strong>Quantity</strong></label>
-                <div class="quantity-selector">
-                    <button class="quantity-btn minus">-</button>
-                    <!--html element 'input' to create an input field in a form. ensure label for equals to id input-->
-                    <input type="number" class="quantity-input" name="quantity" min="1" max="99" value="1">
-                    <button class="quantity-btn plus">+</button>
-                </div>
-            </div>
-            <div class="button-container">
-                <a href="./cart.html"><button class="add-to-cart">Add to cart</button></a>
-            </div>
+            </tr>
+            <td>tape</td>
+            <td>$5</td>
+            <td>1</td>
+            <td>$5</td>
+            </tr>
+        </table>
+
+        <div class="cart-summary">
+            <p>total: <span id="cart-total">$0.00</span></p>
+            <button id="checkout-button">Checkout</button>
         </div>
     </div>
 

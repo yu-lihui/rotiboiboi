@@ -2,10 +2,15 @@ let slides = document.getElementsByClassName("slider_slide");
 let navlinks = document.getElementsByClassName("slider_navlink");
 let currentSlide = 0;
 
+console.log("Slides found:", slides.length);
+console.log("Nav links found:", navlinks.length);
+
+
 //* moveTo parameter represents index of the slide we want to move to.
 //* if moveTo >= no. of slides, go to first slide
 //* if moveTo < 0, go to last slide
 function changeSlide(moveTo) {
+    console.log("Changing slide from", currentSlide, "to", moveTo);
     if (moveTo >= slides.length) { moveTo = 0; }
     if (moveTo < 0) { moveTo = slides.length - 1; }
 
@@ -44,7 +49,7 @@ document.querySelectorAll('.slider_navlink').forEach((bullet, bulletIndex) => {
 })
 
 
-// Search function
+/* Search function
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-input');
     const searchButton = document.querySelector('.search-button');
@@ -52,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function performSearch() {
         const searchTerm
     }
-})
+})*/
 
 //product page: quantity input selector buttons//
 

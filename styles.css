@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: linen;
+    background-color: ivory;
     padding-top: 30px;
     font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     width: 100%;
@@ -575,10 +575,58 @@ input[type="number"] {
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    <<<<<<< HEAD font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-=======
+.add-to-cart:hover {
+    background-color: #b197b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
->>>>>>>1f42b560a960821e0c4b4db4e88c5e2a94fea977
+/* my cart page */
+.cart-container {
+    padding-top: 220px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#checkout-button {
+    background-color: thistle;
+    color: #fff;
+    padding: 10px 100px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+#checkout-button:hover {
+    background-color: #b197b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*about page*/
+.about-container {
+    padding-top: 220px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.about-gallery img {
+    margin: 50px;
+}
+
+#about-roti {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+#about-butter {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
